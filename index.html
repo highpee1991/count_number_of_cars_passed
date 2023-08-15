@@ -5,47 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Vehicle Counter App</title>
 </head>
 
 <body>
     <main class="main-page pager">
-        <section class="header-section header pager">
-            <header class="header pager">
+        <section class="header-section  pager">
+            <header class="main-header pager">
                 <h1 class="logo pager">
-                    Car Counter
+                    Car Counter App
                 </h1>
-                <a href="#previously">
-                    <div class="prev-saved">
-                        Previously Saved
-                    </div>
+                <a href="preSave.html" class="prev-saved">
+                    <button class="btn-prev btn">Previously Saved</button>
                 </a>
             </header>
         </section>
-        <section class="counter-shell pager">
-            <div class="counter-p pager">
-                <div class="counter">
-                    Number Cars Passed: 0
+
+        <section class="main-app">
+            <div class="data">
+                <div class="date-recorded">
+                    <span class="date"></span>
+                    <span class="time"></span>
+                </div>
+                <input type="text" id="nameInput" class="name-hol" placeholder="Enter your name">
+            </div>
+            <div class="counter-shell pager">
+                <div class="counter-p pager">
+                    <div class="counter">
+                        <span class="counting-name">Number Cars Passed: </span>
+                        <span class="counting">0</span>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="buttion-section pager">
-            <div class="btn-keeper pager">
-                <button class="btn minus-btn">
-                    -
-                </button>
-                <button class="btn add-btn">
-                    +
-                </button>
+            <div class="buttion-section pager">
+                <div class="btn-keeper pager">
+                    <button class="btn minus-btn">
+                        -
+                    </button>
+                    <button class="btn add-btn">
+                        +
+                    </button>
+                </div>
             </div>
-            <div class="reset pager">
-                <button class="btn reset-btn">
-                    Reset
-                </button>
-                <button class="save">
-                    Save
-                </button>
+            <div class="save-reset">
+                <div class="reset pager">
+                    <button class="btn reset-btn">
+                        Reset
+                    </button>
+                    <button class="save btn">
+                        Save
+                    </button>
+                </div>
             </div>
+            <div class="error"></div>
         </section>
     </main>
     <script src="app.js"></script>

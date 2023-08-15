@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  outline: none;
+  border: none;
+}
+
+.main-page {
+  height: 100vh;
+  background: linear-gradient(to bottom, #ff9900, #ffcc00);
+  transition: background 0.5s ease;
+  animation: smoothBackground 3s infinite;
+}
+
+.main-page:hover {
+  background: linear-gradient(to bottom, #ffcc00, #ff9900);
+}
+
+@keyframes smoothBackground {
+  0% {
+    background-color: #ff9900;
+  }
+  50% {
+    background-color: #ffcc00;
+  }
+  100% {
+    background-color: #ff9900;
+  }
+}
+
+.main-header {
+  background: transparent;
+  border-bottom: 1px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.btn {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  background-color: rgb(45, 45, 253);
+  box-shadow: 1px 1px rgb(107, 107, 107);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(30, 30, 223);
+  box-shadow: 2px 2px rgb(87, 87, 87);
+}
+
+.main-app {
+  background-color: bisque;
+  margin: 8% 30%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.main-app:hover {
+  background-color: #ffe6c1;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.date-recorded,
+.name-hol {
+  background-color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  color: #640000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.date {
+  margin-right: 0.4em;
+}
+
+.time {
+  margin-left: 0.4rem;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.counting {
+  font-size: 5rem;
+  color: #640000;
+  margin-left: 0.7rem;
+}
+
+.minus-btn {
+  margin-right: 8rem;
+  width: 3rem;
+}
+
+.add-btn {
+  margin-left: 8rem;
+  width: 3rem;
+}
+
+.reset-btn {
+  margin-right: 2rem;
+}
+
+.save-reset {
+  margin-bottom: 2rem;
+}
+
+.counting-name,
+.buttion-section {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* previous page */
+.prevName {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.savedItems {
+  background-color: #073a4a;
+  margin: 3rem 1rem;
+  font-size: 1.2rem;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-holder,
+.time-holder,
+.name-holder {
+  margin-bottom: 0.5rem;
+}
+
+.del-btn {
+  background-color: red;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.counter-holder {
+  margin: 0.2rem 0;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.btn-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem; 
+}
+
+.back {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Media query for adjusting styles on smaller screens */
+
+@media (max-width: 1020px) {
+  .main-app {
+    margin: 8% 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-app {
+    margin: 10% auto;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  /* previous page */
+  .prevName {
+    justify-content: center;
+  }
+
+  .savedItems {
+    margin: 2rem;
+    font-size: .8rem;
+    padding: .7rem 1rem;
+    margin-bottom: 5px;
+  }
+
+  .counter-holder {
+    margin: 0.1rem 0;
+    font-weight: bold;
+    font-size: .8rem;
+  }
+
+  
+}
+
+@media (max-width: 620px) {
+  .logo {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .btn-prev {
+    font-size: 0.8rem;
+  }
+
+  /* previ page */
+.main-page {
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    transition: background 0.5s ease;
+    animation: smoothBackground 3s infinite;
+  }
+
+  
+.main-page:hover {
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+  }
+  
+  @keyframes smoothBackground {
+    0% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #fdfdfd;
+    }
+    100% {
+      background-color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
+  }
+
+  .btn-prev {
+    font-size: 1rem;
+    width: 12rem;
+  }
+
+  .counter {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .counting {
+    font-size: 3rem;
+  }
+  .minus-btn {
+    margin-right: 3rem;
+  }
+
+  .add-btn {
+    margin-left: 3rem;
+  }
+  .reset-btn {
+    margin-right: 1rem;
+  }
+
+  .save-reset {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}
